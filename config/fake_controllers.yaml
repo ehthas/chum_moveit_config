@@ -1,0 +1,38 @@
+controller_list:
+  - name: fake_right_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - jright_shoulder_rotz
+      - jright_shoulder_roty
+      - jright_shoulder_rotx
+      - jright_forearm_rotz
+      - jright_forearm_roty
+      - jright_wrist_roty
+      - jright_wrist_rotx
+  - name: fake_right_hand_controller
+    type: $(arg execution_type)
+    joints:
+      - jright_grip_rhand
+  - name: fake_left_arm_controller
+    type: $(arg execution_type)
+    joints:
+      - jleft_shoulder_rotz
+      - jleft_shoulder_roty
+      - jleft_shoulder_rotx
+      - jleft_forearm_rotz
+      - jleft_forearm_roty
+      - jleft_wrist_roty
+      - jleft_wrist_rotx
+  - name: fake_left_hand_controller
+    type: $(arg execution_type)
+    joints:
+      - jright_grip_lhand
+initial:  # Define initial robot poses.
+  - group: right_arm
+    pose: right_arm_stand
+  - group: right_hand
+    pose: right_grip_open
+  - group: left_arm
+    pose: left_arm_stand
+  - group: left_hand
+    pose: left_grip_open
